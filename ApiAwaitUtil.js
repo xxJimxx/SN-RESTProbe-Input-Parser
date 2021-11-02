@@ -27,7 +27,7 @@ ApiAwaitUtil.prototype = Object.extendsObject(AbstractAjaxProcessor, {
         var result = {};
         var grECC = new GlideRecord('ecc_queue');
         if (grECC.get(this.getParameter('sysparm_id'))) {
-            var probe = new WM_ECC_RESTProbe();
+            var probe = new ECC_RESTProbe();
             result = probe.toObject(grECC);
         }
         return JSON.stringify(result);
