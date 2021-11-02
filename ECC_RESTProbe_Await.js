@@ -1,6 +1,7 @@
-//Async Business Rule on ecc_queue insert 
 (function executeRule(current, previous /*null when async*/ ) {
-
+//Async Business Rule on ecc_queue insert 
+//current.topic == "RESTProbe" && current.queue == "input" && current.state == "ready" 
+	
     var probe = new ECC_RESTProbe();
     var result = probe.toObject(current);
     if (!result || !result.request || !result.request.headers || !result.request.headers["SN.PROCESS_ID"]) {
