@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+	<input type="hidden" id="sys_id" value="${sysparm_eccID}"/>
+	<pre id="json-display" style="padding-left:25px"></pre>
+	
+</j:jelly>
